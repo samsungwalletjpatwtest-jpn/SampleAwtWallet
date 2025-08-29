@@ -5,25 +5,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ATW — 搭乗券</title>
   <script src="https://us-cdn-gpp.mcsvc.samsung.com/lib/wallet-card.js"></script>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    :root { --bg:#0b1020; --panel:#12182c; --sub:#0f1527; --line:#233055; --text:#e7ebf4; --muted:#9fb0d8; --accent:#7ad3ff; }
-    * { box-sizing: border-box; }
-    html, body { max-width:100%; overflow-x:hidden; }
-    body { margin:0; padding:24px; background:var(--bg); color:var(--text); font-family:system-ui,"Noto Sans JP",sans-serif; }
-    .wrap { max-width:920px; margin:0 auto; background:var(--panel); border-radius:16px; padding:24px; box-shadow:0 8px 32px rgba(0,0,0,.35); }
-    a.back { color:var(--muted); text-decoration:none; }
-    h1 { margin:8px 0 0; font-size:22px; }
-    .grid { display:grid; grid-template-columns:1fr; gap:16px; margin-top:16px; }
-    .box { background:var(--sub); border:1px solid var(--line); border-radius:12px; padding:16px; overflow:hidden; }
-    .hint { color:var(--muted); font-size:13px; }
-    #jsTarget, samsung\:wallet { display:block; max-width:100%; }
-    #jsTarget { min-height:62px; display:flex; align-items:center; overflow:hidden; }
-
-    /* Boarding pass preview */
+    /* Boarding-only styles */
     .bp { border:1px dashed #36528b; border-radius:16px; overflow:hidden; background:#141b33; }
     .bp-header { display:flex; align-items:center; justify-content:space-between; padding:14px 16px; background:linear-gradient(135deg,#12345a 0%,#0f2b4c 100%); border-bottom:1px dashed #36528b; }
     .air { font-weight:800; letter-spacing:.5px; }
-    .tag { background:var(--accent); color:#072035; font-weight:800; font-size:12px; border-radius:999px; padding:2px 10px; }
+    .tag { background:var(--accent-light); color:#072035; font-weight:800; font-size:12px; border-radius:999px; padding:2px 10px; }
     .bp-body { padding:16px; display:grid; grid-template-columns:1fr 1fr; gap:16px; }
     @media (max-width:640px){ .bp-body{ grid-template-columns:1fr; } }
     .pair { background:rgba(0,0,0,.25); border:1px solid #2e4374; border-radius:12px; padding:12px; min-width:0; }
@@ -33,7 +21,6 @@
     .bp-footer { padding:12px 16px; border-top:1px dashed #36528b; display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
     .bar { flex:1 1 180px; height:36px; background:repeating-linear-gradient(90deg,#fff 0 6px,#000 6px 12px); border-radius:6px; border:3px solid #0b1020; min-width:180px; }
     .note { font-size:12px; color:var(--muted); }
-    @media (max-width:480px){ .wrap{ padding:16px; } }
   </style>
 </head>
 <body>
@@ -45,7 +32,7 @@
     <!-- 搭乗券風プレビュー -->
     <div class="box bp">
       <div class="bp-header">
-        <div class="air">Wonki Air  ✈︎</div>
+        <div class="air">WanoBi Air  ✈︎</div>
         <div class="tag">BOARDING PASS</div>
       </div>
       <div class="bp-body">

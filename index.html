@@ -4,36 +4,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Add to Samsung Wallet — カードタイプ選択</title>
-  <style>
-    :root { font-family: system-ui, -apple-system, "Noto Sans JP", sans-serif; }
-    body { margin: 0; padding: 24px; background: #0b1020; color: #e7ebf4; }
-    .card { max-width: 960px; margin: 0 auto; background: #12182c; border-radius: 16px; padding: 24px; box-shadow: 0 8px 32px rgba(0,0,0,.35); }
-    h1 { margin: 0 0 8px; font-size: 24px; }
-    .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); margin-top: 16px; }
-    .box { background:#0f1527; border:1px solid #233055; border-radius:12px; padding:16px; display:flex; flex-direction:column; }
-    .box h3 { margin:0 0 8px; }
-    .box p { flex:1; font-size:14px; color:#9fb0d8; }
-    a.btn { margin-top:12px; display:inline-block; padding:12px; border-radius:10px; border:1px solid #2c3d6f; text-decoration:none; color:#e7ebf4; text-align:center; }
-    .hint { font-size: 13px; color:#9fb0d8; }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="card">
     <h1>「Add to Samsung Wallet」— カードタイプを選択</h1>
-    <p class="hint">各ページで <code>cardId</code>, <code>partnerCode</code>, <code>RD URL</code>, <code>cdata</code> を実際の値に差し替えてください。</p>
+    <p class="hint">各ページで <code>cardId</code>、<code>partnerCode</code>、<code>RD URL</code>、<code>cdata(JWT)</code> を実値に差し替えてテストしてください。</p>
 
-    <div class="grid">
-      <div class="box">
+    <div class="grid-cards">
+      <div class="box box-choose">
         <h3>チケット</h3>
         <p>コンサート・映画などの入場券</p>
         <a class="btn" href="./ticket_ja.html">開く</a>
       </div>
-      <div class="box">
+      <div class="box box-choose">
         <h3>メンバーシップ</h3>
         <p>会員証・ポイントカード</p>
         <a class="btn" href="./membership_ja.html">開く</a>
       </div>
-      <div class="box">
+      <div class="box box-choose">
         <h3>搭乗券</h3>
         <p>航空券のボーディングパス</p>
         <a class="btn" href="./boarding_ja.html">開く</a>

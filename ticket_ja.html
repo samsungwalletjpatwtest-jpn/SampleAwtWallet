@@ -5,20 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ATW — チケット</title>
   <script src="https://us-cdn-gpp.mcsvc.samsung.com/lib/wallet-card.js"></script>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    :root { --bg:#0b1020; --panel:#12182c; --sub:#0f1527; --line:#233055; --text:#e7ebf4; --muted:#9fb0d8; --accent:#50b5ff; }
-    * { box-sizing: border-box; }
-    html, body { max-width:100%; overflow-x:hidden; }
-    body { margin:0; padding:24px; background:var(--bg); color:var(--text); font-family:system-ui,"Noto Sans JP",sans-serif; }
-    .wrap { max-width:920px; margin:0 auto; background:var(--panel); border-radius:16px; padding:24px; box-shadow:0 8px 32px rgba(0,0,0,.35); }
-    a.back { color:var(--muted); text-decoration:none; }
-    h1 { margin:8px 0 0; font-size:22px; }
-    .grid { display:grid; grid-template-columns:1fr; gap:16px; margin-top:16px; }
-    .box { background:var(--sub); border:1px solid var(--line); border-radius:12px; padding:16px; overflow:hidden; }
-    .hint { color:var(--muted); font-size:13px; }
-    #jsTarget, samsung\:wallet { display:block; max-width:100%; }
-    #jsTarget { min-height:62px; display:flex; align-items:center; overflow:hidden; }
-    /* --- Ticket preview --- */
+    /* Ticket-only styles */
     .ticket { position:relative; background:#141b33; border:1px dashed #3a4a7d; border-radius:16px; padding:16px 16px 8px; overflow:hidden; }
     .ticket:before,.ticket:after{content:"";position:absolute;top:50%;width:20px;height:20px;background:var(--bg);border:1px dashed #3a4a7d;border-radius:50%;transform:translateY(-50%);}
     .ticket:before{left:-10px;} .ticket:after{right:-10px;}
@@ -28,8 +17,6 @@
     .meta { color:var(--muted); font-size:13px; }
     .seat { font-size:16px; }
     .qr { margin-top:10px; width:clamp(90px,28vw,140px); height:clamp(90px,28vw,140px); background:conic-gradient(from 45deg,#fff 25%, #000 0 50%, #fff 0 75%, #000 0); filter:grayscale(1); border-radius:6px; border:4px solid #0b1020; flex:0 0 auto; }
-    .hr{ height:1px; background:var(--line); margin:16px 0; }
-    .small { font-size:12px; color:var(--muted); overflow-wrap:anywhere; }
     .badge { display:inline-block; font-size:12px; color:#00243c; background:var(--accent); border-radius:999px; padding:2px 10px; font-weight:700; }
   </style>
 </head>
